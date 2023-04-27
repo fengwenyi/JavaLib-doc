@@ -5,7 +5,7 @@
 
 日期时间，在日常开发中，用的比较多，比如：格式化输出，不同类型转换等操作。
 
-名称：DateTimeUtils
+名称：com.fengwenyi.javalib.convert.DateTimeUtils
 
 描述：日期时间工具类
 
@@ -55,7 +55,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-String result = DateTimeUtils.parseLocalDateTime(dateTimeStr, DateTimePattern.DateTime);
+LocalDateTime result = DateTimeUtils.parseLocalDateTime(dateTimeStr, DateTimePattern.DateTime);
 System.out.println(result);
 ```
 
@@ -63,7 +63,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-String result = DateTimeUtils.parseLocalDate(dateTimeStr, DateTimePattern.DateTime);
+LocalDate result = DateTimeUtils.parseLocalDate(dateTimeStr, DateTimePattern.DateTime);
 System.out.println(result);
 ```
 
@@ -71,7 +71,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-String result = DateTimeUtils.parseDate(dateTimeStr, DateTimePattern.DateTime);
+Date result = DateTimeUtils.parseDate(dateTimeStr, DateTimePattern.DateTime);
 System.out.println(result);
 ```
 
@@ -123,6 +123,10 @@ LocalDateTime result = DateTimeUtils.toLocalDateTime(timestamp);
 System.out.println(result);
 ```
 
+::: warning 注意
+时间戳格式是毫秒！
+:::
+
 ## 字符串合法性校验
 
 ```java
@@ -130,3 +134,71 @@ String dateTimeStr = "2023-04-27 18:00:00";
 boolean result = DateTimeUtils.isValid(dateTimeStr, DateTimePattern.DateTime);
 System.out.println(result);
 ```
+
+## 获取年份
+
+```java
+LocalDate localDate = LocalDate.now();
+int result = DateTimeUtils.getYear(localDate);
+System.out.println(result);
+```
+
+## 获取当前年份
+
+```java
+int result = DateTimeUtils.getYear();
+System.out.println(result);
+```
+
+## 获取自然周的开始时间
+
+```java
+LocalDate localDate = LocalDate.now();
+LocalDateTime result = DateTimeUtils.getStartOfNaturalWeek(localDate);
+System.out.println(result);
+```
+
+::: tip 提示
+自然周就是周一到周日。<br>
+因此，返回的是，指定时间所在周的周一的时间。
+:::
+
+## 获取月份的开始时间
+
+```java
+LocalDate localDate = LocalDate.now();
+LocalDateTime result = DateTimeUtils.getStartOfMonth(localDate);
+System.out.println(result);
+```
+
+## 判断时间是否在区间内
+
+```java
+LocalTime localTime = LocalTime.of(10, 0, 0);
+LocalTime startTime = LocalTime.of(8, 0, 0);
+LocalTime endTime = LocalTime.of(12, 0, 0);
+boolean result = DateTimeUtils.judgeInTimeDuration(localTime, startTime, endTime);
+System.out.println(result);
+```
+
+::: tip 提示
+1、返回true，表示在区间内；返回false，表示不再区间内。<br>
+2、区间内，分为两种，跨天和不跨天。<br>
+3、该方法不包含边界。
+:::
+
+## 判断时间是否在区间内，含边界
+
+```java
+LocalTime localTime = LocalTime.of(8, 0, 0);
+LocalTime startTime = LocalTime.of(8, 0, 0);
+LocalTime endTime = LocalTime.of(12, 0, 0);
+boolean result = DateTimeUtils.judgeInTimeDurationWithBoundary(localTime, startTime, endTime);
+System.out.println(result);
+```
+
+::: tip 提示
+1、返回true，表示在区间内；返回false，表示不再区间内。<br>
+2、区间内，分为两种，跨天和不跨天。<br>
+3、该方法包含边界。
+:::

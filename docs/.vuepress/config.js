@@ -25,7 +25,8 @@ export default defineUserConfig({
           text: '指南',
           children: [
             '/guide/DateTimeUtils.md',
-            '/guide/JsonUtils.md'
+            '/guide/JsonUtils.md',
+            '/guide/HttpUtils.md'
           ],
         },
       ],

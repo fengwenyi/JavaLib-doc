@@ -1,13 +1,13 @@
 
 # 日期时间工具类
 
-## 介绍
+com.fengwenyi.javalib.convert.DateTimeUtils
 
 日期时间，在日常开发中，用的比较多，比如：格式化输出，不同类型转换等操作。
 
-名称：com.fengwenyi.javalib.convert.DateTimeUtils
+推荐使用 `LocalDateTime`。
 
-描述：日期时间工具类
+
 
 ## 常量
 
@@ -201,4 +201,28 @@ System.out.println(result);
 1、返回true，表示在区间内；返回false，表示不再区间内。<br>
 2、区间内，分为两种，跨天和不跨天。<br>
 3、该方法包含边界。
+:::
+
+## 时间戳转当天最小时间
+
+```java
+long timestamp = System.currentTimeMillis();
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMin(timestamp);
+System.out.println(result);
+```
+
+::: warning 注意
+时间戳格式是毫秒！
+:::
+
+## 时间戳转当天最大时间
+
+```java
+long timestamp = System.currentTimeMillis();
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMax(timestamp);
+System.out.println(result);
+```
+
+::: warning 注意
+时间戳格式是毫秒！
 :::

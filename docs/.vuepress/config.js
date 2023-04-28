@@ -24,12 +24,30 @@ export default defineUserConfig({
         {
           text: '指南',
           children: [
+            '/guide/',
+            '/guide/getting-started.md',
             '/guide/DateTimeUtils.md',
             '/guide/JsonUtils.md',
-            '/guide/HttpUtils.md'
+            '/guide/AesUtils.md',
+            '/guide/Base64Utils.md',
+            '/guide/HexUtils.md',
+            '/guide/HttpUtils.md',
+            '/guide/IdUtils.md',
+            '/guide/Md5Utils.md',
+            '/guide/RsaUtils.md',
+            '/guide/ShaUtils.md',
+            '/guide/XmlUtils.md',
           ],
         },
       ],
-    }
+    },
+    contributorsText: '贡献者',
+    lastUpdatedText: '最后更新时间',
+    tip: '提示',
+    warning: '注意',
+    danger: '警告',
+    repo: 'https://github.com/fengwenyi/JavaLib',
+    editLinkText: '编辑',
+    docsRepo: 'https://github.com/fengwenyi/JavaLib-doc'
   }),
 })

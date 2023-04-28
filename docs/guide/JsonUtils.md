@@ -1,10 +1,11 @@
 # JSON工具类
 
-## 介绍
-
 com.fengwenyi.javalib.convert.JsonUtils
 
-## 对象转JSON字符串
+JSON 在我们接口开发中，用得非常多，首先要保证的就是正确。<br>
+所以，底层使用 jackson 进行 JSON 转换操作。
+
+## 对象转JSON
 
 ```java
 User user = new User();
@@ -14,7 +15,12 @@ String result = JsonUtils.convertString(user);
 System.out.println(result);
 ```
 
-## JSON字符串转换成对象
+::: tip 提示
+使用此方法，我们可以将`对象`、`数组`、`集合`转换成JSON字符串。
+:::
+
+
+## JSON转对象
 
 ```java
 String jsonStr = "{\"name\":\"张三\",\"age\":16}";
@@ -22,7 +28,7 @@ String result = JsonUtils.convertObject(jsonStr, User.class);
 System.out.println(result);
 ```
 
-## JSON字符串转换成对象 2
+## JSON转多层级对象
 
 待转换的JSON字符串如下：
 
@@ -67,7 +73,7 @@ ResultTemplate<User> result = JsonUtils.convertObject(
 System.out.println(result);
 ```
 
-## JSON字符串转换成集合
+## JSON转集合
 
 ```java
 String jsonStr = "[{\"name\":\"张三\",\"age\":16}]";
@@ -75,7 +81,7 @@ List<User> result = JsonUtils.convertCollection(jsonStr, List.class, User.class)
 System.out.println(result);
 ```
 
-## JSON字符串转换成集合 2
+## JSON转集合, TypeReference
 
 ```java
 String jsonStr = "[{\"name\":\"张三\",\"age\":16}]";

@@ -48,6 +48,16 @@ export default defineUserConfig({
     danger: '警告',
     repo: 'https://github.com/fengwenyi/JavaLib',
     editLinkText: '编辑',
-    docsRepo: 'https://github.com/fengwenyi/JavaLib-doc'
+    docsRepo: 'https://github.com/fengwenyi/JavaLib-doc',
+    docsDir: 'docs'
   }),
+  plugins: [
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: '搜索',
+        },
+      },
+    }),
+  ],
 })

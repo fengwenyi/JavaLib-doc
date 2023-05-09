@@ -1,8 +1,8 @@
-# 日志级别
+# 日志级别 <Badge text="枚举"/>
 
 com.fengwenyi.javalib.constant.LogLevel
 
-`枚举类`
+
 
 
 由低到高

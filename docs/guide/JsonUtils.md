@@ -105,8 +105,8 @@ Map<String, String> result = JsonUtils.convertMap(jsonStr, String.class, String.
 ## 获取JSON的key列表
 
 ```java
-String jsonStr = "{\"name\":\"张三\"}";
-List<String> result = JsonUtils.getKeys(jsonStr, String.class, String.class);
+String json = "{\"name\":\"张三\"}";
+List<String> result = JsonUtils.getKeys(json);
 ```
 
 ::: tip

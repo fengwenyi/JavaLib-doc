@@ -1,4 +1,4 @@
-# 日志级别
+# 日志级别 ^枚举^
 
 com.fengwenyi.javalib.constant.LogLevel
 

@@ -15,7 +15,7 @@ String result = JsonUtils.convertString(user);
 System.out.println(result);
 ```
 
-::: tip 提示
+::: tip
 使用此方法，我们可以将`对象`、`数组`、`集合`转换成JSON字符串。
 :::
 
@@ -70,7 +70,6 @@ ResultTemplate<User> result = JsonUtils.convertObject(
     jsonStr,
     new TypeReference(ResultTemplate<User>(){})
 );
-System.out.println(result);
 ```
 
 ## JSON转集合
@@ -78,7 +77,6 @@ System.out.println(result);
 ```java
 String jsonStr = "[{\"name\":\"张三\",\"age\":16}]";
 List<User> result = JsonUtils.convertCollection(jsonStr, List.class, User.class);
-System.out.println(result);
 ```
 
 ## JSON转集合, TypeReference
@@ -89,18 +87,28 @@ List<User> result = JsonUtils.convertCollection(
     jsonStr,
     new TypeReference(List<User>(){})
 );
-System.out.println(result);
 ```
 
-## JSON字符串转换成Map
+## JSON转换成Map
 
 ```java
 String jsonStr = "{\"name\":\"张三\"}";
 Map<String, String> result = JsonUtils.convertMap(jsonStr, String.class, String.class);
-System.out.println(result);
 ```
 
-::: tip 提示
+::: tip
 第二个参数是Map的key的类型。<br>
 第三个参数是Map的value的类型。
+:::
+
+
+## 获取JSON的key列表
+
+```java
+String jsonStr = "{\"name\":\"张三\"}";
+List<String> result = JsonUtils.getKeys(jsonStr, String.class, String.class);
+```
+
+::: tip
+只返回第一层的key
 :::

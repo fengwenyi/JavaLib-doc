@@ -11,15 +11,15 @@ com.fengwenyi.javalib.convert.DateTimeUtils
 
 ## 常量
 
-- DateTimePattern.DATE_TIME ：`yyyy-MM-dd HH:mm:ss`
-- DateTimePattern.DATE ：`yyyy-MM-dd`
-- DateTimePattern.TIME ：`HH:mm:ss`
+- DateTimeUtils.DATE_TIME ：`yyyy-MM-dd HH:mm:ss`
+- DateTimeUtils.DATE ：`yyyy-MM-dd`
+- DateTimeUtils.TIME ：`HH:mm:ss`
 
 ## LocalDateTime格式化
 
 ```java
 LocalDateTime localDateTime = LocalDateTime.now();
-String result = DateTimeUtils.format(localDateTime, DateTimePattern.DateTime);
+String result = DateTimeUtils.format(localDateTime, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 
@@ -27,7 +27,7 @@ System.out.println(result);
 
 ```java
 LocalDate localDate = LocalDate.now();
-String result = DateTimeUtils.format(localDate, DateTimePattern.Date);
+String result = DateTimeUtils.format(localDate, DateTimeUtils.Date);
 System.out.println(result);
 ```
 
@@ -35,7 +35,7 @@ System.out.println(result);
 
 ```java
 Date date = new Date();
-String result = DateTimeUtils.format(date, DateTimePattern.DateTime);
+String result = DateTimeUtils.format(date, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 
@@ -43,7 +43,7 @@ System.out.println(result);
 
 ```java
 long timestamp = System.currentTimeMillis();
-String result = DateTimeUtils.format(timestamp, DateTimePattern.DateTime);
+String result = DateTimeUtils.format(timestamp, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 
@@ -55,7 +55,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-LocalDateTime result = DateTimeUtils.parseLocalDateTime(dateTimeStr, DateTimePattern.DateTime);
+LocalDateTime result = DateTimeUtils.parseLocalDateTime(dateTimeStr, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 
@@ -63,7 +63,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-LocalDate result = DateTimeUtils.parseLocalDate(dateTimeStr, DateTimePattern.DateTime);
+LocalDate result = DateTimeUtils.parseLocalDate(dateTimeStr, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 
@@ -71,7 +71,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-Date result = DateTimeUtils.parseDate(dateTimeStr, DateTimePattern.DateTime);
+Date result = DateTimeUtils.parseDate(dateTimeStr, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 
@@ -131,7 +131,7 @@ System.out.println(result);
 
 ```java
 String dateTimeStr = "2023-04-27 18:00:00";
-boolean result = DateTimeUtils.isValid(dateTimeStr, DateTimePattern.DateTime);
+boolean result = DateTimeUtils.isValid(dateTimeStr, DateTimeUtils.DateTime);
 System.out.println(result);
 ```
 

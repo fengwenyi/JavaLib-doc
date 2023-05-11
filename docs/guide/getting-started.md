@@ -8,12 +8,12 @@
 <dependency>
     <groupId>com.fengwenyi</groupId>
     <artifactId>JavaLib</artifactId>
-    <version>2.2.5</version>
+    <version>2.2.6</version>
 </dependency>
 ```
 
 **Gradle**
 
 ```groovy
-implementation 'com.fengwenyi:JavaLib:2.2.5'
+implementation 'com.fengwenyi:JavaLib:2.2.6'
 ```

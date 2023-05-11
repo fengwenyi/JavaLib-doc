@@ -39,6 +39,7 @@ export default defineUserConfig({
             '/guide/RsaUtils.md',
             '/guide/ShaUtils.md',
             '/guide/LogLevel.md',
+            '/guide/BeanUtils.md',
           ],
         },
       ],

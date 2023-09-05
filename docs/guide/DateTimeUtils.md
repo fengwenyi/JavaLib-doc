@@ -51,6 +51,18 @@ System.out.println(result);
 时间戳格式是毫秒！
 :::
 
+
+
+## OffsetDateTime格式化
+
+```java
+OffsetDateTime offsetDateTime = OffsetDateTime.now();
+String result = DateTimeUtils.format(offsetDateTime, "uuuu-MM-dd'T'HH:mm:ssXXX");
+System.out.println(result);
+```
+
+
+
 ## 字符串解析为LocalDateTime
 
 ```java
@@ -114,6 +126,37 @@ LocalDateTime localDateTime = LocalDateTime.now();
 Date result = DateTimeUtils.toLocalDateTime(localDateTime);
 System.out.println(result);
 ```
+
+
+
+## LocalDateTime转换成OffsetDateTime
+
+```java
+LocalDateTime localDateTime = LocalDateTime.now();
+OffsetDateTime offsetDateTime = DateTimeUtils.toOffsetDateTime(localDateTime);
+```
+
+
+
+提供时区偏移
+
+```java
+LocalDateTime localDateTime = LocalDateTime.now();
+ZoneOffset zoneOffset = ZoneOffset.of("+8");
+OffsetDateTime offsetDateTime = DateTimeUtils.toOffsetDateTime(localDateTime, zoneOffset);
+```
+
+
+
+提供偏移小时
+
+```java
+LocalDateTime localDateTime = LocalDateTime.now();
+String offsetId = "+8"
+OffsetDateTime offsetDateTime = DateTimeUtils.toOffsetDateTime(localDateTime, offsetId);
+```
+
+
 
 ## 时间戳转换成LocalDateTime
 

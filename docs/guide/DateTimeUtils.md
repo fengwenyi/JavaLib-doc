@@ -258,6 +258,31 @@ System.out.println(result);
 时间戳格式是毫秒！
 :::
 
+
+## 获取当天最小时间
+
+```java
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMin();
+System.out.println(result);
+```
+
+## 日期转当天最小时间
+
+```java
+LocalDate localDate = LocalDate.now();
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMin(localDate);
+System.out.println(result);
+```
+
+## 时间转当天最小时间
+
+```java
+LocalDateTime localDateTime = LocalDateTime.now();
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMin(localDateTime);
+System.out.println(result);
+```
+
+
 ## 时间戳转当天最大时间
 
 ```java
@@ -269,3 +294,26 @@ System.out.println(result);
 ::: warning 注意
 时间戳格式是毫秒！
 :::
+
+## 获取当天最大时间
+
+```java
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMax();
+System.out.println(result);
+```
+
+## 日期转当天最大时间
+
+```java
+LocalDate localDate = LocalDate.now();
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMax(localDate);
+System.out.println(result);
+```
+
+## 时间转当天最大时间
+
+```java
+LocalDateTime localDateTime = LocalDateTime.now();
+LocalDateTime result = DateTimeUtils.toLocalDateTimeMax(localDateTime);
+System.out.println(result);
+```

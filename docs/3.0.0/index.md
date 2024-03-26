@@ -12,12 +12,12 @@ layout: doc
 <dependency>
     <groupId>com.fengwenyi</groupId>
     <artifactId>JavaLib</artifactId>
-    <version>2.2.7</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
 **Gradle**
 
 ```groovy
-implementation 'com.fengwenyi:JavaLib:2.2.7'
+implementation 'com.fengwenyi:JavaLib:3.0.0'
 ```

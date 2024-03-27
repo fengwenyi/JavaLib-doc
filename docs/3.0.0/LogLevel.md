@@ -1,6 +1,6 @@
 # 日志级别 <Badge text="枚举"/>
 
-com.fengwenyi.javalib.constant.LogLevel
+com.fengwenyi.javalib.enums.LogLevel
 
 
 

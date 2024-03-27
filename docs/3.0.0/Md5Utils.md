@@ -1,11 +1,11 @@
 # MD5加密工具类
 
-com.fengwenyi.javalib.encryption.MD5Utils
+com.fengwenyi.javalib.encryption.Md5Utils
 
 ## 加密
 
 ```java
 String plaintext = "";
-String result = MD5Utils.md5(plaintext);
+String result = Md5Utils.encrypt(plaintext);
 System.out.println(result);
 ```

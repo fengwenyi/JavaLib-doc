@@ -2,12 +2,12 @@
 
 SHA1 加密
 
-com.fengwenyi.javalib.encryption.SHAUtils
+com.fengwenyi.javalib.encryption.ShaUtils
 
 ## 加密
 
 ```java
 String plaintext = "";
-String result = SHAUtils.SHA1(plaintext);
+String result = ShaUtils.encrypt(plaintext);
 System.out.println(result);
 ```

@@ -8,7 +8,7 @@ com.fengwenyi.javalib.convert.XmlUtils
 User user = new User();
 user.setName("张三");
 user.setAge(16)
-String result = XmlUtils.convertString(user);
+String result = XmlUtils.string(user);
 System.out.println(result);
 ```
 
@@ -16,7 +16,7 @@ System.out.println(result);
 
 ```java
 String xml = "";
-User result = XmlUtils.convertObject(xml, User.class);
+User result = XmlUtils.object(xml, User.class);
 System.out.println(result);
 ```
 
@@ -24,7 +24,7 @@ System.out.println(result);
 
 ```java
 String xml = "";
-ResultTemplate<User> result = XmlUtils.convertObject(
+ResultTemplate<User> result = XmlUtils.object(
     xml, 
     new TypeReference(ResultTemplate<User>() {})
 );

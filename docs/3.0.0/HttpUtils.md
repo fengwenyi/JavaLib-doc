@@ -84,7 +84,6 @@ Request属性如下：
 2、目前实现的请求工具如下：
 
 <ul>
-    <li>JDK</li>
     <li>OkHttp</li>
 </ul>
 
@@ -118,7 +117,6 @@ Request request = new Request();
 request.setUrl("https://erwin-api.fengwenyi.com/erwin/bookmark/page");
 request.setParam(paramMap);
 request.setMethod(Request.Method.GET);
-// request.setUtil(Request.Util.JDK);
 request.setUtil(Request.Util.OkHttp);
 
 Request.Option option = new Request.Option();

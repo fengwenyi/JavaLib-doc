@@ -5,14 +5,14 @@ com.fengwenyi.javalib.generate.IdUtils
 ## 获取UUID
 
 ```java
-String result = IdUtils.getUUID();
+String result = IdUtils.generateUUID();
 System.out.println(result);
 ```
 
 ## 生成ID
 
 ```java
-String result = IdUtils.genId();
+String result = IdUtils.generateId();
 System.out.println(result);
 ```
 

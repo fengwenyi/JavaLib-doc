@@ -11,7 +11,7 @@ JSON 在我们接口开发中，用得非常多，首先要保证的就是正确
 User user = new User();
 user.setName("张三");
 user.setAge(16)
-String result = JsonUtils.convertString(user);
+String result = JsonUtils.string(user);
 System.out.println(result);
 ```
 
@@ -24,7 +24,7 @@ System.out.println(result);
 
 ```java
 String jsonStr = "{\"name\":\"张三\",\"age\":16}";
-String result = JsonUtils.convertObject(jsonStr, User.class);
+String result = JsonUtils.object(jsonStr, User.class);
 System.out.println(result);
 ```
 
@@ -66,7 +66,7 @@ public class User {
 
 ```java
 String jsonStr = "{\"code\":\"success\",\"message\":\"Success\",\"data\":{\"name\":\"张三\",\"age\":16}}";
-ResultTemplate<User> result = JsonUtils.convertObject(
+ResultTemplate<User> result = JsonUtils.object(
     jsonStr,
     new TypeReference(ResultTemplate<User>(){})
 );
@@ -76,14 +76,14 @@ ResultTemplate<User> result = JsonUtils.convertObject(
 
 ```java
 String jsonStr = "[{\"name\":\"张三\",\"age\":16}]";
-List<User> result = JsonUtils.convertCollection(jsonStr, List.class, User.class);
+List<User> result = JsonUtils.collection(jsonStr, List.class, User.class);
 ```
 
 ## JSON转集合, TypeReference
 
 ```java
 String jsonStr = "[{\"name\":\"张三\",\"age\":16}]";
-List<User> result = JsonUtils.convertCollection(
+List<User> result = JsonUtils.collection(
     jsonStr,
     new TypeReference(List<User>(){})
 );
@@ -93,7 +93,7 @@ List<User> result = JsonUtils.convertCollection(
 
 ```java
 String jsonStr = "{\"name\":\"张三\"}";
-Map<String, String> result = JsonUtils.convertMap(jsonStr, String.class, String.class);
+Map<String, String> result = JsonUtils.map(jsonStr, String.class, String.class);
 ```
 
 ::: tip
